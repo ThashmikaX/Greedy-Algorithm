@@ -2,30 +2,25 @@
 
 using namespace std;
 
-int main1()
+int main()
 {
     int x;
     int ten_count = 0, five_count = 0, two_count = 0, one_count = 0;
 
-    cout << "Enter the value : ";
+    cout << "Enter the value1 : ";
     cin >> x;
 
-    while(x >= 10) {
-        x = x - 10;
-        ten_count++;
-    }
-    while(x >= 5) {
-        x = x - 5;
-        five_count++;
-    }
-    while(x >= 2) {
-        x = x - 2;
-        two_count++;
-    }
-    while(x >= 1) {
-        x = x - 1;
-        one_count++;
-    }
+    int y1 = x % 10;
+    ten_count = (x - y1)/10;
+
+    int y2 = y1 % 5;
+    five_count = (y1 - y2)/5;
+
+    int y3 = y2 % 2;
+    two_count = (y2 - y3)/2;
+
+    int y4 = y3 % 1;
+    one_count = (y3 - y4)/1;
 
     cout << "10 : " << ten_count << endl;
     cout << "5 : " << five_count << endl;
@@ -33,3 +28,4 @@ int main1()
     cout << "1 : " << one_count << endl;
     return 0;
 }
+
